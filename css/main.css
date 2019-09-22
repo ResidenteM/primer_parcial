@@ -1,0 +1,702 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+/* El CSS siguiente esta pensando primero para moviles y luego para 
+   Escritiorio*/
+
+   /*se establece valores para todos los elementos de la pagina*/
+   /*margen de cero*/
+   /*padding de cero*/
+   /*se establece el border-box para incluir el border y padding*/
+   /*se hace el calculo de tamaño de fuente*/
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: calc(0.5em + 1vh);
+}
+
+/* El estilo para moviles */
+
+/*En el body*/
+/*se establece el color de fondo/
+/se establece el color de la fuente/
+/se dice que la tipografia sea espesifica y que si no que tenga sans-serif por default/
+/el texto se pone al centro/
+/a la fuente se le da grosor*/
+body {
+    background-color: #112935;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: 400;
+}
+/*En el header/
+/se asigna el display flex/
+/el espacio se define para el contenido entre ellos que sera el espacio/
+/se asigna margin inicialmente (arriba abajo) e (izquierda y derecha)/
+/se agrega el margen de abajo*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 5%;
+    margin-bottom: 2.8em;
+}
+/*solo para los src/
+/se asigna "none" para ocultar el elemento*/
+.src-only {
+    display: none;
+}
+/*esconder en los telefonos/
+/se asigna "none" para ocultar el elemento en celulares*/
+.hide-mobile {
+    display: none;
+}
+/*parrafo/
+/se modifica el tamaño de fuente/
+/implementando el padding respecto al root/
+/se cambia la altura del parrafo*/
+p{
+    font-size: 0.75em;
+    padding: 1rem;
+    line-height: 25px;
+}
+
+/*se expresa el margen y ancho en la imagen del logo/
+/se expresa el ancho en la imagen de el logo/
+/de expresa el margen en la imagen de el logo*/
+.logo {
+    width: 125px;
+    margin: 1em;
+}
+/*las opciones/
+/se hereda el color/
+/se omite la decoracion de la etiqueta "a" /
+/se selecciona "relative" para que se mueva a la pocision inicial/
+/se le asigna un top/
+/se le asigna un right/
+/se le asigna un tamaño al icono/
+/se agrega el display flex/
+/realiza un salto de linea si los elementos no cuadran/
+/ae alinearan del primero al ultimo*/
+.options {
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+    top: 10%;
+    right: 25%;
+    font-size: 5.5rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+}
+/*elemento final de las opciones/
+/se asigna un tamaño al icono, caso actual el icono de la x*/
+.options i:last-child {
+    font-size: 1.6rem;
+}
+
+/* Big area /
+/tamaño de la imagen de big hero*/
+.big-hero img {
+    width: 150px;
+}
+
+/*h2 que esta en el big hero/
+/tamaño de la letra/
+/asignando grosor a la fuente/
+/espacio entre letras/
+/margen de arriba*/
+.big-hero h2 {
+    font-size: 3em;
+    font-weight: 700;
+    letter-spacing: 0.002em;
+    margin-top: 0.4em ;
+}
+
+/*p que esta en el big hero/
+/tamaño y color de fuente*/
+.big-hero p {
+    font-size: 1.3em;
+    color: #D7DEE6;
+
+}
+
+/* links de social-media/
+/se agrega padding de 0/
+/se agrega display flex/
+/se delimita en la direccion de filas/
+/se delimita al centro*/
+.social-links{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+/*social media en big hero/
+/se adiciona un margin de arriba/
+/se adiciona un margen de abajo*/
+.big-hero .social-links
+{
+    margin-top: -8.1em;
+    margin-bottom: 12%;
+}
+
+/* social media, li y a/
+/se agrega color de fuente/
+/se omite la decoracion a la fuente/
+/tamaño de fuente en los iconos*/
+.social-links li a{
+    color: #D7DEE6;
+    text-decoration: none;
+    font-size: 14rem;
+}
+/*espacio entre elementos/
+/margin izquierdo*/
+.big-hero .social-links li:first-child a {
+    margin-right: 0.12em;
+
+}
+/*color de fondo*/
+.green-area {
+    background-color: #0AC693; 
+}
+
+/*en post/
+/se agrega un padding/
+/se agrega un margen negativo*/
+.post {
+    padding: 1em;
+    margin-bottom: -2px;
+}
+
+/*h2 en la clase post/
+/se transorman a letras mayusulas/
+/se agrega un grosor a la letra/
+/se agrega un tamaño de fuente/
+/se agrega un margen/
+/se asigna el margen de abajo*/
+.post h2 {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1.7em;
+    margin: 1em;
+    margin-bottom: 2em;
+}
+
+/*ul del post/
+/se omite la decoracion a la lista*/
+.post ul {
+    list-style: none;
+}
+
+/*elementos de la lista/
+/se agrega un alto minimo/
+/se agrega un ancho minimo/
+/se agrega un margen de 2rem (arriba, abajo) y en los lados es automatico*/
+.post ul li {
+    min-height: 300px;
+    max-width: 350px;
+    margin: 2rem auto;
+}
+
+/*articulos en las listas/
+/el contenido se recorta y no se muestran las barras de posicion/
+/color de fondo/
+/se redondean las esquinas/
+/el texto se justifica a la izquierda/
+/agregando un padding a la parte de abajo*/
+.post ul li article {
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #ffffff;
+    text-align: left;
+    padding-bottom: 2em;
+}
+/*imagenes del articulo/
+/altura de la imagen/
+/ancho de la imagen/
+/la imagen se ajusta al molde*/
+.post article img{
+    height: 240px;
+    width: 100%;
+    object-fit: cover;
+}
+/*h3 del articulo/
+/color de la fuente/
+/margen en el top/
+/primero el padding de arriba y abajo, despues el de izquierda y derecha/
+/tamaño de la fuente/
+/los espacios en blanco se reducen, pero quita los saltos de linea del origen/
+/se recorta el contenido y no las barras de posicion no se muestran./
+/cuando el texto no cabe pone (...) con la propiedad ellipsis//*/
+.post article h3 {
+    color: #0D5061;
+    margin-top: 0.8em;
+    padding: 0em 1rem;
+    font-size: 1.5em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*p del post/
+/color de fuente/
+/tamaño de fuente/
+/se agrega un padding/
+/la altura del parrafo se modifica*/
+.post article p {
+    color:#112935;
+    font-size: 1.1em;
+    padding: 1rem;
+    line-height: 25px;
+}
+
+/* About */
+/*margen en la parte superior*/
+.about{
+    margin-top: 4.2em;
+}
+/*h2 del about/
+/las letras pasan a mayusculas/
+/grosor de fuente/
+/tamaño de fuente/
+/se asigna un margen*/
+.about h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.7em;
+    margin: 1em;
+}
+/*bio-info-img/
+/se pone un margen de arriba/
+/se agrega un margen inferior/
+/ancho de la imagen*/
+.bio-info img{
+    margin-top: 3em;
+    margin-bottom: 1.4em;
+   width: 210px;
+}
+/*bio, info y parafo/
+/se mmodifica el tamaño de fuente/
+/el padding se agrega a los 4 lados/
+/texto justificado a la izquierda/
+/el espacio se define entre lineas/
+/espaciado entre letras/
+/se agraga un margen inferior*/
+.bio-info p{
+    font-size: 21px;
+    padding: 2em;
+    text-align: left;
+    line-height: 25px;
+    letter-spacing: 2px;
+    margin-bottom: 0.7em;
+}
+/*contacto/
+/se define el display/
+/se define la direccion del flex/
+/justificar el texto a la izquierda/
+/insertando padding (arriba y abajo) e (izquierda derecha)*/
+.contact {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 0px 1em;
+}
+/*label del formulario/
+/tamaño de fuente/
+/grosor de fuente*/
+ form label{
+     font-size: 1.7em;
+     font-weight: 700;
+ }
+/*contact/
+/agregando margen superior*/
+.contact * + * {
+    margin-top: 0.8em;
+}
+
+/*formulario de contacto/
+/se define el display/
+/se define la direccion del flex*/
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+/*texto del input de contacto*/
+.contact input
+{
+    margin-bottom: 0.5em;
+}
+
+/*input del form y el text area/
+/se inserta padding (arriba abajo) e (izquierda derecha)/
+/omitiendo los vordes/
+/radio que tienen las esquinas de los imput/
+/ancho/
+/tamaño de la fuente*/
+.contact-form input, .contact-form textarea{
+    padding: 1.3rem 3.5rem;
+    border: none;
+    border-radius: 0px 2em;
+    width: 100%;
+    font-size: 2em;
+}
+
+/* Decorando placeholder */
+/*color de placeholder*/
+
+
+::-webkit-input-placeholder { 
+    color: #D7DEE6; 
+} 
+/*para internet explorer*/
+:-moz-placeholder { /* Firefox 18- */ color: #D7DEE6; } 
+ 
+::-moz-placeholder { /* Firefox 19+ */ color: #D7DEE6; } 
+ 
+:-ms-input-placeholder { color: #D7DEE6; }
+
+/*boton de tipo submit/
+/color de fondo/
+/grosor de la letra/
+/color de la letra/
+/tamaño de la fuente segun el root/
+/margen superior/
+/margen inferior/
+/espacio que tiene entre letras*/
+.contact-form input[type=submit] {
+    background-color: #F74442;
+    font-weight: 200;
+    color: white;
+    font-size: 1.45rem;
+    margin-top: 1.75em;
+    margin-bottom: 3em;
+    letter-spacing: 0.05em;
+}
+/*imagen que tiene de fondo*/
+.black-decoration{
+    background-image: url("../images/decoracion_oscura_small.svg");
+}
+
+/*footer/
+/fondo de color del footer/
+/color de letra*/
+footer{
+    background-color: #0D5061;
+    color:#D7DEE6;
+}
+/*social media del footer/
+/agregando margenes*/
+footer .social-links li{
+    margin-top: -9em;
+}
+/*magen derecho*/
+footer .social-links li:first-child  a{
+    margin-right: 0.18em;
+
+}
+/* text area/
+/ el resize se quita*/
+textarea
+{
+ resize: none;
+}
+/*p del footer/
+/tamaño de fuente/
+/margen superior/
+/relleno inferior*/
+footer p{
+    font-size: 0.9em;
+    margin-top: -4em;
+    padding-bottom: 2.5em;
+}
+/*menu/
+/mobile menu color/
+/se define la posicion/
+/le da mas importancia a otros elementos/
+/concediendo un top/
+/concediendo un right/
+/concediendo el ancho/
+/se define la altura/
+/omitiendo el estilo de la lista/
+/justificando el texto a la derecha/
+/concediendo un padding*/
+.menu {
+    background-color: #112935;
+    position: absolute;
+    z-index: 20;
+    top: 60px;
+    right: 0;
+    width: 100vw;
+    height: calc(100vh - 60px);
+    list-style: none;
+    text-align: left;
+    padding: 1em;
+}
+/*listas del menu/
+/se define el display/
+/agregando un padding/
+/agregando el margin superior*/
+.menu li {
+    display: block;
+    padding: 0.5em;
+    margin-top: 5px;
+}
+/*links de las listas en el menu/
+/se agrega un color de letra/
+/se quita la decoracion del texto*/
+.menu li a {
+    color: white;
+    text-decoration: none;
+    
+}
+/*la imagen aumenta en el big hero/
+/se añade altura/
+/se le asigna un ancho automatico/
+/margen inferior*/
+.big-hero .container img
+{
+    height: 172px;
+    width: auto;
+    margin-bottom: 6%;
+}
+
+/* Pesonalizando estilo para tablets*/
+@media only screen and (min-width: 768px) {
+  
+    /*fondo del footer/
+    /color de fondo/
+    /color de letra*/
+    footer{
+        background-color: #0D5061;
+        color:#D7DEE6;
+    }
+    /*social media del footer/
+    /se asignan margenes/
+    /tamaño de fuente*/
+    footer .social-links li{
+        margin-top: 0em;
+        font-size: 3em;
+    }
+    /*margen derecho*/
+    footer .social-links li:first-child  a{
+        margin-right: 0.2em;
+
+    }
+    /*h2 de la clase post/
+    /las letras pasan a mayusulas/
+    /a la letra se le asigna un grosor/
+    /a la fuente se le asigna un grosor/
+    /se agrega un margen/
+    /se agrega margen inferior*/
+    .post h2 {
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 3em;
+        margin: 1em;
+        margin-bottom: 1em;
+    }
+    .fa-arrow-circle-down
+    {
+        /*se agrega un margin superior/
+        /tamaño de la fuente para los iconos/
+        /se agrega margen inferior/
+        /se define un color de fuente*/ 
+        margin-top: -5em;
+        font-size: 5rem;
+        margin-bottom: 20%; 
+        color: #0AC693;
+    }
+    /*En el header/
+    tamaño de funte 1.2*/
+    .header a{
+        font-size: 1.2em;
+        
+    }
+    .container
+    {
+        /*
+        se asigna margen izquierdo
+        se asigna margen derecho
+        */
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    /*social media en big hero/
+    /se agrega un margen superior/
+    /se agrega un margen inferior/
+    /tamaño de la fuente para los iconos*/
+    .big-hero .social-links
+    {
+        margin-top: -1.8em;
+        margin-bottom: 8%;
+        font-size: 7rem;
+    }
+
+    /* social-links, lista e hipervinculos*/
+    /*se le define un color de fuente/
+    /se le omite la decoracion a la fuente*/
+    .social-links li a{
+        color: #D7DEE6;
+        text-decoration: none;
+        
+    }
+    /*entre los elementos se da un espacio/
+    /magen derecho*/
+    .big-hero .social-links li:first-child a {
+        margin-right: 0.12em;
+
+    }
+
+    .header
+    {
+        margin: 0% 2%;
+    }
+    .about
+    {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3%;
+    }
+    .bio-info
+    {
+        margin-top: 2%;
+        float: left;
+        width: 50%;
+    }
+    .contact
+    {
+        margin-top: 2%;
+        float: right;
+        width:50%;
+    }
+    .contact-form input[type=submit]
+    {
+        width: 50%;
+    }
+    .social-links li a
+    {
+        font-size: 5em;
+    }
+    
+
+    /*listas del post/
+    /el estilo de las listas se elimina/
+    /se define el display/
+    /si los elementos no caben da un salto de linea /
+    /los elementos se centran*/
+    .post ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    /*elementos de la lista/
+    / a los elementos se le asigna un minimo de altura/
+    /a los elementos se le asigna un maximo de altura /
+    /se agrega un margen (arriba abajo) e (izquierda y derecha)/
+    /determina cuanto va a crecer, cuanto se va a encoger y el tamaño que tiene el elemento*/
+    .post ul li {
+        min-height: 350px;
+        max-height: 3500px;
+        margin: 1rem 2rem;
+        flex: 1 0 300px;
+    }
+
+
+    .logo {
+        /*ancho del logo/
+        /alto del logo*/
+        width: 150px;
+        margin: 1.5em;
+    }
+
+    .show-desktop {
+        /*el display se define*/
+        display: block;
+    }
+
+    .hide-desktop {
+        /*escondiendo para desktop "none"*/
+        display: none;
+    }
+
+    /*menu/
+    /color de fondo/
+    /se define la posicion/
+    /a los otros elementos se les da mas importancia/
+    /ancho/
+    /altura/
+    /se define el display/
+    /definiendo el margen superior*/
+    .menu {
+        background-color: #112935; 
+        position: static;
+        z-index: 20;
+        width: auto;
+        height:auto;
+        display: flex;
+        margin-top: 1em;
+    }
+
+} 
+
+@media only screen and (min-width: 1024px) {
+
+    .menu li a:hover{
+        color: #F74442;
+        
+    }
+    .container
+    {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .header
+    {
+        margin: 0% 2%;
+    }
+    .about
+    {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3%;
+    }
+    .bio-info
+    {
+        margin-top: 2%;
+        float: left;
+        width: 50%;
+    }
+    .contact
+    {
+        margin-top: 2%;
+        float: right;
+        width:50%;
+    }
+    .contact-form input[type=submit]
+    {
+        width: 50%;
+    }
+
+
+}
+
+@media only screen and (min-width: 1440px) {
+
+    
+    .container {
+        /*se define el ancho/
+        /el maargin se agrega (arriba abajo) e (izquierda derecha)/
+        /maximo del ancho*/
+        width: 80%;
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+} 
